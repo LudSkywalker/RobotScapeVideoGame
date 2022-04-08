@@ -1,0 +1,2378 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/Demo/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/demo/demoBack.jpg" type="Texture" id=2]
+[ext_resource path="res://Scenes/Demo/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Demo/Demo.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/demo/Instructions.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/demo/Habitacion2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/demo/Habitacion3.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Demo/Bullet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Demo/Habitacion10.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Demo/EnemyFinal.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 744.766, 438.018 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 62.9771, 188.504 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[node name="Demo" type="Node2D"]
+position = Vector2( -773.115, -410.258 )
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -656.929, -317.49 )
+
+[node name="Habitacion1" type="Node2D" parent="."]
+position = Vector2( 20.4198, -25.3517 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background" type="Area2D" parent="Habitacion1"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion1/Background"]
+visible = false
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion1/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Imagen2" type="TextureRect" parent="Habitacion1/Background"]
+margin_left = -737.666
+margin_top = -436.647
+margin_right = 414.334
+margin_bottom = 203.353
+rect_scale = Vector2( 1.30114, 1.38135 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle5" type="StaticBody2D" parent="Habitacion1"]
+position = Vector2( -774.829, 4.94058 )
+scale = Vector2( -0.347903, 2.47989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion1/Obstacle5"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle6" type="StaticBody2D" parent="Habitacion1"]
+position = Vector2( -15.0508, 466.202 )
+scale = Vector2( 12.5321, 0.11989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion1/Obstacle6"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle7" type="StaticBody2D" parent="Habitacion1"]
+position = Vector2( -28.2097, -464.029 )
+scale = Vector2( 12.5321, 0.11989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion1/Obstacle7"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion1"]
+position = Vector2( -493.923, 296.363 )
+scale = Vector2( 4.35473, -0.784812 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion1/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion1/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion1"]
+position = Vector2( 181.445, -195.547 )
+scale = Vector2( 3.23915, -1.30704 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion1/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion1/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion1"]
+position = Vector2( 654.485, -264.946 )
+scale = Vector2( 1.71218, 0.944575 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion1/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion1/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion1"]
+position = Vector2( 656.302, 258.372 )
+scale = Vector2( 1.75473, 0.984572 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion1/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion1/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion1"]
+position = Vector2( 427.733, 6.70148 )
+
+[node name="Start" type="Node2D" parent="Habitacion1/EnemyGroup"]
+position = Vector2( 40.6947, 365.892 )
+
+[node name="End" type="Node2D" parent="Habitacion1/EnemyGroup"]
+position = Vector2( 39.1728, -373.228 )
+
+[node name="Enemy" parent="Habitacion1/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( -780.768, 76.5938 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion1"]
+position = Vector2( -89.3737, 31.0013 )
+
+[node name="Start" type="Node2D" parent="Habitacion1/EnemyGroup2"]
+position = Vector2( -60.9705, 347.915 )
+
+[node name="End" type="Node2D" parent="Habitacion1/EnemyGroup2"]
+position = Vector2( 549.81, 343.428 )
+
+[node name="Enemy" parent="Habitacion1/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( -0.368896, -395.697 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Habitacion2" type="Node2D" parent="."]
+position = Vector2( 1527.58, -25.4593 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background" type="Area2D" parent="Habitacion2"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion2/Background"]
+visible = false
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion2/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Imagen2" type="TextureRect" parent="Habitacion2/Background"]
+margin_left = -737.666
+margin_top = -436.647
+margin_right = 414.334
+margin_bottom = 203.353
+rect_scale = Vector2( 1.30114, 1.38135 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion2"]
+position = Vector2( -417.893, 373.827 )
+scale = Vector2( 5.31473, -0.34481 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion2/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion2/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle6" type="StaticBody2D" parent="Habitacion2"]
+position = Vector2( 5.05212, 374.216 )
+scale = Vector2( 1.59473, -0.34481 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion2/Obstacle6"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion2/Obstacle6"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion2"]
+position = Vector2( -418.822, -354.464 )
+scale = Vector2( 5.42688, 0.427699 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion2/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion2/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion2"]
+position = Vector2( 417.296, 374.105 )
+scale = Vector2( 5.35473, -0.34481 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion2/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion2/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion2"]
+position = Vector2( 410.31, -350.574 )
+scale = Vector2( 5.43406, 0.40562 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion2/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion2/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion2"]
+position = Vector2( -9.78368, 232.81 )
+
+[node name="Start" type="Node2D" parent="Habitacion2/EnemyGroup"]
+position = Vector2( -673.197, -0.801822 )
+
+[node name="End" type="Node2D" parent="Habitacion2/EnemyGroup"]
+position = Vector2( 666.199, 3.83688 )
+
+[node name="Enemy" parent="Habitacion2/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( 3.14806, -2.51984 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Obstacle5" type="StaticBody2D" parent="Habitacion2"]
+position = Vector2( 774.939, 42.4468 )
+scale = Vector2( -0.347903, 2.47989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion2/Obstacle5"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion2"]
+position = Vector2( -9.78368, -203.123 )
+
+[node name="Start" type="Node2D" parent="Habitacion2/EnemyGroup2"]
+position = Vector2( -673.197, -0.801822 )
+
+[node name="End" type="Node2D" parent="Habitacion2/EnemyGroup2"]
+position = Vector2( 666.199, 3.83688 )
+
+[node name="Enemy" parent="Habitacion2/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( 3.14806, -2.51984 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion2"]
+position = Vector2( -4.744, -1.53571 )
+
+[node name="Start" type="Node2D" parent="Habitacion2/EnemyGroup3"]
+position = Vector2( 4.6402, -343.5 )
+
+[node name="End" type="Node2D" parent="Habitacion2/EnemyGroup3"]
+position = Vector2( -2.1767, 210.205 )
+
+[node name="Enemy" parent="Habitacion2/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( 3.14806, -2.51984 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup4" type="Node2D" parent="Habitacion2"]
+position = Vector2( -385.24, -6.57541 )
+
+[node name="Start" type="Node2D" parent="Habitacion2/EnemyGroup4"]
+position = Vector2( 7.16003, -197.349 )
+
+[node name="End" type="Node2D" parent="Habitacion2/EnemyGroup4"]
+position = Vector2( 6, 243.222 )
+
+[node name="Enemy" parent="Habitacion2/EnemyGroup4" instance=ExtResource( 3 )]
+position = Vector2( 3.14806, -2.51984 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup5" type="Node2D" parent="Habitacion2"]
+position = Vector2( 370.712, -4.05557 )
+
+[node name="Start" type="Node2D" parent="Habitacion2/EnemyGroup5"]
+position = Vector2( 7.16003, -197.349 )
+
+[node name="End" type="Node2D" parent="Habitacion2/EnemyGroup5"]
+position = Vector2( 6, 243.222 )
+
+[node name="Enemy" parent="Habitacion2/EnemyGroup5" instance=ExtResource( 3 )]
+position = Vector2( 3.14806, -2.51984 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Habitacion3" type="Node2D" parent="."]
+position = Vector2( 1527.86, -908.98 )
+
+[node name="Background" type="Area2D" parent="Habitacion3"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion3/Background"]
+visible = false
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion3/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Imagen2" type="TextureRect" parent="Habitacion3/Background"]
+margin_left = -737.666
+margin_top = -436.647
+margin_right = 414.334
+margin_bottom = 203.353
+rect_scale = Vector2( 1.30114, 1.38135 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( 111.641, 259.29 )
+scale = Vector2( 10.3106, 0.217815 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -559.963, -33.7634 )
+scale = Vector2( 0.59983, 0.623807 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -563.6, -359.916 )
+scale = Vector2( 0.589602, 0.447581 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle8" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -530.271, 169.629 )
+scale = Vector2( 0.125845, 0.463807 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle8"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle8"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -343.484, -182.541 )
+scale = Vector2( 0.690292, 1.39216 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle9" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -110.873, 39.9087 )
+scale = Vector2( 0.59983, 0.943812 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle9"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle9"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle10" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -115.294, -359.173 )
+scale = Vector2( 0.589602, 0.447581 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle10"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle10"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle12" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( 188.078, 40.3756 )
+scale = Vector2( 0.59983, 0.943807 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle12"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle12"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle13" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( 181.279, -361.152 )
+scale = Vector2( 0.589602, 0.447581 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion3/Obstacle13"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle13"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion3"]
+position = Vector2( 46.5568, 355.953 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup3"]
+position = Vector2( -707.199, 20.3376 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup3"]
+position = Vector2( 661.336, 18.3821 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( -41.3157, 17.2435 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup7" type="Node2D" parent="Habitacion3"]
+position = Vector2( 222.559, -236.272 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup7"]
+position = Vector2( -451.52, 32.2299 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup7"]
+position = Vector2( 441.333, 24.3281 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup7" instance=ExtResource( 3 )]
+position = Vector2( -31.8019, 26.7573 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup4" type="Node2D" parent="Habitacion3"]
+position = Vector2( -634.212, -44.4987 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup4"]
+position = Vector2( -42.722, -338.635 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup4"]
+position = Vector2( -33.8903, 418.984 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup4" instance=ExtResource( 3 )]
+position = Vector2( -47.9301, 17.7586 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup5" type="Node2D" parent="Habitacion3"]
+position = Vector2( -454.415, -125.407 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup5"]
+position = Vector2( -5.58661, -255.837 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup5"]
+position = Vector2( 5.0777, 270.098 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup5" instance=ExtResource( 3 )]
+position = Vector2( 0.0699463, -2.19391 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup8" type="Node2D" parent="Habitacion3"]
+position = Vector2( 291.642, -132.142 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup8"]
+position = Vector2( -5.58661, -255.837 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup8"]
+position = Vector2( 5.0777, 270.098 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup8" instance=ExtResource( 3 )]
+position = Vector2( 0.0699463, -171.465 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup9" type="Node2D" parent="Habitacion3"]
+position = Vector2( 393.068, -130.728 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup9"]
+position = Vector2( 1.48444, -255.837 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup9"]
+position = Vector2( 5.0777, 270.098 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup9" instance=ExtResource( 3 )]
+position = Vector2( 8.97888, 143.913 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup10" type="Node2D" parent="Habitacion3"]
+position = Vector2( 522.869, -131.311 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup10"]
+position = Vector2( -5.58661, -255.837 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup10"]
+position = Vector2( 5.0777, 270.098 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup10" instance=ExtResource( 3 )]
+position = Vector2( 0.0699463, -2.19391 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup11" type="Node2D" parent="Habitacion3"]
+position = Vector2( 665.802, -134.387 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup11"]
+position = Vector2( -5.58661, -255.837 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup11"]
+position = Vector2( 5.0777, 270.098 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup11" instance=ExtResource( 3 )]
+position = Vector2( 5.41541, -155.429 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup6" type="Node2D" parent="Habitacion3"]
+position = Vector2( -227.885, -123.519 )
+
+[node name="Start" type="Node2D" parent="Habitacion3/EnemyGroup6"]
+position = Vector2( -5.58661, -255.837 )
+
+[node name="End" type="Node2D" parent="Habitacion3/EnemyGroup6"]
+position = Vector2( 5.0777, 270.098 )
+
+[node name="Enemy" parent="Habitacion3/EnemyGroup6" instance=ExtResource( 3 )]
+position = Vector2( 0.0699463, -2.19391 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Obstacle5" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -776.66, -6.46887 )
+scale = Vector2( -0.347903, 2.35989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle5"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle6" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -24.1335, -465.238 )
+scale = Vector2( 12.5321, 0.11989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle6"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle7" type="StaticBody2D" parent="Habitacion3"]
+position = Vector2( -776.66, -6.46887 )
+scale = Vector2( -0.347903, 2.35989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion3/Obstacle7"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bullet" parent="Habitacion3" instance=ExtResource( 8 )]
+position = Vector2( 31.3502, 151.517 )
+
+[node name="Habitacion4" type="Node2D" parent="."]
+visible = false
+position = Vector2( 1533.81, 847.593 )
+
+[node name="Background" type="Area2D" parent="Habitacion4"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion4/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion4/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion4"]
+position = Vector2( -103.606, 91.7155 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion4/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion4/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion4"]
+position = Vector2( -468.217, -65.3185 )
+scale = Vector2( 1.54771, 1.84803 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion4/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion4/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion4"]
+position = Vector2( 466.214, 366.411 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion4/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion4/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion4"]
+position = Vector2( 564.992, -229.795 )
+scale = Vector2( 2.79407, 1.20562 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion4/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion4/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion4"]
+position = Vector2( -229.01, 225.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion4/EnemyGroup"]
+position = Vector2( -91.1139, 4.23779 )
+
+[node name="End" type="Node2D" parent="Habitacion4/EnemyGroup"]
+position = Vector2( 900.544, 6.35672 )
+
+[node name="Enemy" parent="Habitacion4/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( 116.541, 0 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion4"]
+position = Vector2( -235.662, -72.6591 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion4/EnemyGroup2"]
+position = Vector2( -75.4291, 1.43503 )
+
+[node name="End" type="Node2D" parent="Habitacion4/EnemyGroup2"]
+position = Vector2( 560.43, 6.35672 )
+
+[node name="Enemy" parent="Habitacion4/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( 116.541, 0 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion4"]
+position = Vector2( -331.859, -244.082 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion4/EnemyGroup3"]
+position = Vector2( 616.962, -131.834 )
+
+[node name="End" type="Node2D" parent="Habitacion4/EnemyGroup3"]
+position = Vector2( 613.282, 477.567 )
+
+[node name="Enemy" parent="Habitacion4/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( -4.41156, -151.191 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Habitacion5" type="Node2D" parent="."]
+position = Vector2( 3033.46, -909.23 )
+
+[node name="Background" type="Area2D" parent="Habitacion5"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion5/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion5/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion5"]
+position = Vector2( -660.55, 95.902 )
+scale = Vector2( 1.54771, 1.96803 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion5/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion5/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion5"]
+position = Vector2( -403.662, -300.659 )
+
+[node name="Start" type="Node2D" parent="Habitacion5/EnemyGroup2"]
+position = Vector2( -87.287, 89.5771 )
+
+[node name="End" type="Node2D" parent="Habitacion5/EnemyGroup2"]
+position = Vector2( 120.773, -60.0454 )
+
+[node name="Enemy" parent="Habitacion5/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( -67.459, 74 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion5"]
+position = Vector2( -243.025, -148.776 )
+
+[node name="Start" type="Node2D" parent="Habitacion5/EnemyGroup3"]
+position = Vector2( 234.323, -208.097 )
+
+[node name="End" type="Node2D" parent="Habitacion5/EnemyGroup3"]
+position = Vector2( -238.043, 149.019 )
+
+[node name="Enemy" parent="Habitacion5/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( -34.0937, 2.95978 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion5"]
+position = Vector2( -141.855, -44.163 )
+
+[node name="Start" type="Node2D" parent="Habitacion5/EnemyGroup"]
+position = Vector2( -335.538, 288.98 )
+
+[node name="End" type="Node2D" parent="Habitacion5/EnemyGroup"]
+position = Vector2( 434.563, -327.679 )
+
+[node name="Enemy" parent="Habitacion5/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( 38.4258, -2.5199 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup4" type="Node2D" parent="Habitacion5"]
+position = Vector2( -158.826, 264.136 )
+
+[node name="Start" type="Node2D" parent="Habitacion5/EnemyGroup4"]
+position = Vector2( -179.975, 102.931 )
+
+[node name="End" type="Node2D" parent="Habitacion5/EnemyGroup4"]
+position = Vector2( 468.504, -338.993 )
+
+[node name="Enemy" parent="Habitacion5/EnemyGroup4" instance=ExtResource( 3 )]
+position = Vector2( 72.0996, 53.6032 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Obstacle6" type="StaticBody2D" parent="Habitacion5"]
+position = Vector2( -24.1335, -465.238 )
+scale = Vector2( 12.5321, 0.11989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion5/Obstacle6"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle7" type="StaticBody2D" parent="Habitacion5"]
+position = Vector2( -3.24561, 463.366 )
+scale = Vector2( 11.9321, 0.11989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion5/Obstacle7"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Habitacion6" type="Node2D" parent="."]
+visible = false
+position = Vector2( 3039.84, 847.78 )
+
+[node name="Background" type="Area2D" parent="Habitacion6"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion6/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion6/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion6"]
+position = Vector2( -103.606, 91.7155 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion6/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion6/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion6"]
+position = Vector2( -468.217, -65.3185 )
+scale = Vector2( 1.54771, 1.84803 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion6/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion6/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion6"]
+position = Vector2( 466.214, 366.411 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion6/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion6/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion6"]
+position = Vector2( 564.992, -229.795 )
+scale = Vector2( 2.79407, 1.20562 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion6/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion6/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion6"]
+position = Vector2( -229.01, 225.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion6/EnemyGroup"]
+position = Vector2( -91.1139, 4.23779 )
+
+[node name="End" type="Node2D" parent="Habitacion6/EnemyGroup"]
+position = Vector2( 900.544, 6.35672 )
+
+[node name="Enemy" parent="Habitacion6/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( 116.541, 0 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion6"]
+position = Vector2( -235.662, -72.6591 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion6/EnemyGroup2"]
+position = Vector2( -75.4291, 1.43503 )
+
+[node name="End" type="Node2D" parent="Habitacion6/EnemyGroup2"]
+position = Vector2( 560.43, 6.35672 )
+
+[node name="Enemy" parent="Habitacion6/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( 116.541, 0 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion6"]
+position = Vector2( -331.859, -244.082 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion6/EnemyGroup3"]
+position = Vector2( 616.962, -131.834 )
+
+[node name="End" type="Node2D" parent="Habitacion6/EnemyGroup3"]
+position = Vector2( 613.282, 477.567 )
+
+[node name="Enemy" parent="Habitacion6/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( -4.41156, -151.191 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Habitacion7" type="Node2D" parent="."]
+position = Vector2( 4537.56, -909.289 )
+
+[node name="Background" type="Area2D" parent="Habitacion7"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion7/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion7/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion7"]
+position = Vector2( -163.561, -167.683 )
+scale = Vector2( 14.6677, 1.57617 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion7/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion7/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup8" type="Node2D" parent="Habitacion7"]
+position = Vector2( -229.555, 211.39 )
+
+[node name="Start" type="Node2D" parent="Habitacion7/EnemyGroup8"]
+position = Vector2( -443.426, 13.6805 )
+
+[node name="End" type="Node2D" parent="Habitacion7/EnemyGroup8"]
+position = Vector2( 870.337, 17.5523 )
+
+[node name="Enemy" parent="Habitacion7/EnemyGroup8" instance=ExtResource( 3 )]
+position = Vector2( 45.9854, 5.03967 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup7" type="Node2D" parent="Habitacion7"]
+position = Vector2( -388.774, 329.726 )
+
+[node name="Start" type="Node2D" parent="Habitacion7/EnemyGroup7"]
+position = Vector2( -447.055, 38.4355 )
+
+[node name="End" type="Node2D" parent="Habitacion7/EnemyGroup7"]
+position = Vector2( 1052.83, 40.6855 )
+
+[node name="Enemy" parent="Habitacion7/EnemyGroup7" instance=ExtResource( 3 )]
+position = Vector2( 195.665, 36.9937 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup5" type="Node2D" parent="Habitacion7"]
+position = Vector2( -1219.3, 364.589 )
+
+[node name="Start" type="Node2D" parent="Habitacion7/EnemyGroup5"]
+position = Vector2( -287.237, 15.6176 )
+
+[node name="End" type="Node2D" parent="Habitacion7/EnemyGroup5"]
+position = Vector2( 209.4, 0.674805 )
+
+[node name="Enemy" parent="Habitacion7/EnemyGroup5" instance=ExtResource( 3 )]
+position = Vector2( -0.0146484, -6.96033 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup6" type="Node2D" parent="Habitacion7"]
+position = Vector2( -1029.16, 220.822 )
+
+[node name="Start" type="Node2D" parent="Habitacion7/EnemyGroup6"]
+position = Vector2( -293.339, 2.51538 )
+
+[node name="End" type="Node2D" parent="Habitacion7/EnemyGroup6"]
+position = Vector2( 213.402, 2.45026 )
+
+[node name="Enemy" parent="Habitacion7/EnemyGroup6" instance=ExtResource( 3 )]
+position = Vector2( 45.9854, 5.03967 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Obstacle5" type="StaticBody2D" parent="Habitacion7"]
+position = Vector2( 775.504, -8.46887 )
+scale = Vector2( -0.347903, 2.35989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion7/Obstacle5"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Habitacion8" type="Node2D" parent="."]
+visible = false
+position = Vector2( 4554.57, 836.279 )
+
+[node name="Background" type="Area2D" parent="Habitacion8"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion8/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion8/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion8"]
+position = Vector2( -103.606, 91.7155 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion8/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion8/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion8"]
+position = Vector2( -468.217, -65.3185 )
+scale = Vector2( 1.54771, 1.84803 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion8/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion8/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion8"]
+position = Vector2( 466.214, 366.411 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion8/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion8/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion8"]
+position = Vector2( 564.992, -229.795 )
+scale = Vector2( 2.79407, 1.20562 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion8/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion8/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion8"]
+position = Vector2( -229.01, 225.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion8/EnemyGroup"]
+position = Vector2( -91.1139, 4.23779 )
+
+[node name="End" type="Node2D" parent="Habitacion8/EnemyGroup"]
+position = Vector2( 900.544, 6.35672 )
+
+[node name="Enemy" parent="Habitacion8/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( 116.541, 0 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion8"]
+position = Vector2( -235.662, -72.6591 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion8/EnemyGroup2"]
+position = Vector2( -75.4291, 1.43503 )
+
+[node name="End" type="Node2D" parent="Habitacion8/EnemyGroup2"]
+position = Vector2( 560.43, 6.35672 )
+
+[node name="Enemy" parent="Habitacion8/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( 127.855, -33.9412 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion8"]
+position = Vector2( -331.859, -244.082 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion8/EnemyGroup3"]
+position = Vector2( 616.962, -131.834 )
+
+[node name="End" type="Node2D" parent="Habitacion8/EnemyGroup3"]
+position = Vector2( 613.282, 477.567 )
+
+[node name="Enemy" parent="Habitacion8/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( -4.41156, -151.191 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Habitacion9" type="Node2D" parent="."]
+position = Vector2( 4537.82, -32.202 )
+
+[node name="Background" type="Area2D" parent="Habitacion9"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion9/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion9/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle5" type="StaticBody2D" parent="Habitacion9"]
+position = Vector2( -776.66, 34.68 )
+scale = Vector2( -0.347903, 2.35989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion9/Obstacle5"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Habitacion10" type="Node2D" parent="."]
+position = Vector2( 6037.1, -32.0706 )
+script = ExtResource( 10 )
+
+[node name="Background" type="Area2D" parent="Habitacion10"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion10/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion10/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle5" type="StaticBody2D" parent="Habitacion10"]
+position = Vector2( 775.504, -2.11209 )
+scale = Vector2( -0.347903, 2.35989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion10/Obstacle5"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle7" type="StaticBody2D" parent="Habitacion10"]
+position = Vector2( -741.692, 466.544 )
+scale = Vector2( 23.9721, 0.11989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion10/Obstacle7"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle8" type="StaticBody2D" parent="Habitacion10"]
+position = Vector2( 42.9888, -464.984 )
+scale = Vector2( 11.9321, 0.11989 )
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion10/Obstacle8"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyFinal" parent="Habitacion10" instance=ExtResource( 11 )]
+position = Vector2( -1838.14, 283.241 )
+
+[node name="EnemyFinal2" parent="Habitacion10" instance=ExtResource( 11 )]
+position = Vector2( -2128.31, 287.998 )
+
+[node name="EnemyFinal3" parent="Habitacion10" instance=ExtResource( 11 )]
+position = Vector2( 644.925, -292.335 )
+
+[node name="EnemyFinal4" parent="Habitacion10" instance=ExtResource( 11 )]
+position = Vector2( 644.925, 283.241 )
+
+[node name="EnemyFinal5" parent="Habitacion10" instance=ExtResource( 11 )]
+position = Vector2( -829.692, 292.755 )
+
+[node name="Area2D" type="Area2D" parent="Habitacion10"]
+position = Vector2( -833.207, -334.496 )
+scale = Vector2( 13.7484, 8.5013 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion10/Area2D"]
+shape = SubResource( 3 )
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion10"]
+position = Vector2( -1620.36, -376.913 )
+scale = Vector2( 10.3106, 0.217815 )
+collision_layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion10/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion10/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Habitacion11" type="Node2D" parent="."]
+visible = false
+position = Vector2( 7559.87, -892.899 )
+
+[node name="Background" type="Area2D" parent="Habitacion11"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion11/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion11/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion11"]
+position = Vector2( -103.606, 91.7155 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion11/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion11/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion11"]
+position = Vector2( -468.217, -65.3185 )
+scale = Vector2( 1.54771, 1.84803 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion11/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion11/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion11"]
+position = Vector2( 466.214, 366.411 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion11/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion11/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion11"]
+position = Vector2( 564.992, -229.795 )
+scale = Vector2( 2.79407, 1.20562 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion11/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion11/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion11"]
+position = Vector2( -229.01, 225.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion11/EnemyGroup"]
+position = Vector2( -91.1139, 4.23779 )
+
+[node name="End" type="Node2D" parent="Habitacion11/EnemyGroup"]
+position = Vector2( 900.544, 6.35672 )
+
+[node name="Enemy" parent="Habitacion11/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( 116.541, 0 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion11"]
+position = Vector2( -235.662, -72.6591 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion11/EnemyGroup2"]
+position = Vector2( -75.4291, 1.43503 )
+
+[node name="End" type="Node2D" parent="Habitacion11/EnemyGroup2"]
+position = Vector2( 560.43, 6.35672 )
+
+[node name="Enemy" parent="Habitacion11/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( 127.855, -33.9412 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion11"]
+position = Vector2( -331.859, -244.082 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion11/EnemyGroup3"]
+position = Vector2( 616.962, -131.834 )
+
+[node name="End" type="Node2D" parent="Habitacion11/EnemyGroup3"]
+position = Vector2( 613.282, 477.567 )
+
+[node name="Enemy" parent="Habitacion11/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( -4.41156, -151.191 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Habitacion13" type="Node2D" parent="."]
+visible = false
+position = Vector2( 7567.39, 896.661 )
+
+[node name="Background" type="Area2D" parent="Habitacion13"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion13/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion13/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion13"]
+position = Vector2( -103.606, 91.7155 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion13/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion13/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion13"]
+position = Vector2( -468.217, -65.3185 )
+scale = Vector2( 1.54771, 1.84803 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion13/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion13/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion13"]
+position = Vector2( 466.214, 366.411 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion13/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion13/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion13"]
+position = Vector2( 564.992, -229.795 )
+scale = Vector2( 2.79407, 1.20562 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion13/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion13/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion13"]
+position = Vector2( -229.01, 225.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion13/EnemyGroup"]
+position = Vector2( -91.1139, 4.23779 )
+
+[node name="End" type="Node2D" parent="Habitacion13/EnemyGroup"]
+position = Vector2( 900.544, 6.35672 )
+
+[node name="Enemy" parent="Habitacion13/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( 116.541, 0 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion13"]
+position = Vector2( -235.662, -72.6591 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion13/EnemyGroup2"]
+position = Vector2( -75.4291, 1.43503 )
+
+[node name="End" type="Node2D" parent="Habitacion13/EnemyGroup2"]
+position = Vector2( 560.43, 6.35672 )
+
+[node name="Enemy" parent="Habitacion13/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( 127.855, -33.9412 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion13"]
+position = Vector2( -331.859, -244.082 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion13/EnemyGroup3"]
+position = Vector2( 616.962, -131.834 )
+
+[node name="End" type="Node2D" parent="Habitacion13/EnemyGroup3"]
+position = Vector2( 613.282, 477.567 )
+
+[node name="Enemy" parent="Habitacion13/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( -4.41156, -151.191 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="Habitacion12" type="Node2D" parent="."]
+visible = false
+position = Vector2( 7567.42, -1.88141 )
+
+[node name="Background" type="Area2D" parent="Habitacion12"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Forma" type="CollisionShape2D" parent="Habitacion12/Background"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Imagen" type="TextureRect" parent="Habitacion12/Background"]
+margin_left = -754.499
+margin_top = -442.334
+margin_right = 397.501
+margin_bottom = 197.666
+rect_scale = Vector2( 1.30852, 1.38399 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Obstacle" type="StaticBody2D" parent="Habitacion12"]
+position = Vector2( -103.606, 91.7155 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion12/Obstacle"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion12/Obstacle"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="StaticBody2D" parent="Habitacion12"]
+position = Vector2( -468.217, -65.3185 )
+scale = Vector2( 1.54771, 1.84803 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion12/Obstacle2"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion12/Obstacle2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="StaticBody2D" parent="Habitacion12"]
+position = Vector2( 466.214, 366.411 )
+scale = Vector2( 4.15473, -0.34481 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion12/Obstacle3"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion12/Obstacle3"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle4" type="StaticBody2D" parent="Habitacion12"]
+position = Vector2( 564.992, -229.795 )
+scale = Vector2( 2.79407, 1.20562 )
+collision_layer = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Habitacion12/Obstacle4"]
+margin_left = -63.4921
+margin_top = -188.727
+margin_right = -23.4921
+margin_bottom = -148.727
+rect_scale = Vector2( 3.14537, 9.44662 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Habitacion12/Obstacle4"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyGroup" type="Node2D" parent="Habitacion12"]
+position = Vector2( -229.01, 225.25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion12/EnemyGroup"]
+position = Vector2( -91.1139, 4.23779 )
+
+[node name="End" type="Node2D" parent="Habitacion12/EnemyGroup"]
+position = Vector2( 900.544, 6.35672 )
+
+[node name="Enemy" parent="Habitacion12/EnemyGroup" instance=ExtResource( 3 )]
+position = Vector2( 116.541, 0 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup2" type="Node2D" parent="Habitacion12"]
+position = Vector2( -235.662, -72.6591 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion12/EnemyGroup2"]
+position = Vector2( -75.4291, 1.43503 )
+
+[node name="End" type="Node2D" parent="Habitacion12/EnemyGroup2"]
+position = Vector2( 560.43, 6.35672 )
+
+[node name="Enemy" parent="Habitacion12/EnemyGroup2" instance=ExtResource( 3 )]
+position = Vector2( 127.855, -33.9412 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[node name="EnemyGroup3" type="Node2D" parent="Habitacion12"]
+position = Vector2( -331.859, -244.082 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="Node2D" parent="Habitacion12/EnemyGroup3"]
+position = Vector2( 616.962, -131.834 )
+
+[node name="End" type="Node2D" parent="Habitacion12/EnemyGroup3"]
+position = Vector2( 613.282, 477.567 )
+
+[node name="Enemy" parent="Habitacion12/EnemyGroup3" instance=ExtResource( 3 )]
+position = Vector2( -4.41156, -151.191 )
+startPath = NodePath("../Start")
+endPath = NodePath("../End")
+
+[connection signal="body_exited" from="Habitacion10/Area2D" to="Habitacion10" method="_on_Area2D_body_exited"]
