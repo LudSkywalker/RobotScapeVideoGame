@@ -16,4 +16,5 @@ func damage():
 		if batery <= 0:
 			queue_free()
 		else:
-			$Batery.play(str(int(batery / 3)))
+			if int(batery / 3) > 0:
+				$Batery.play(str(int(batery / 3)))

@@ -5,14 +5,15 @@ var used = false
 func _process(_delta):
 	if used:
 		if (
-			!is_instance_valid($EnemyFinal)
-			&& !is_instance_valid($EnemyFinal2)
-			&& !is_instance_valid($EnemyFinal3)
-			&& !is_instance_valid($EnemyFinal4)
-			&& !is_instance_valid($EnemyFinal5)
+			!has_node("EnemyFinal")
+			&& !has_node("EnemyFinal1")
+			&& !has_node("EnemyFinal2")
+			&& !has_node("EnemyFinal3")
+			&& !has_node("EnemyFinal4")
 		):
 			OS.alert("¡Felicidades!, has ganado\nHas demostrado tu inteligencia y valentia")
 			get_tree().quit()
+			used = false
 
 
 func _on_Area2D_body_exited(body):

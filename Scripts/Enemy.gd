@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 class_name Enemy
 
-export(NodePath) var startPath
-export(NodePath) var endPath
+export(NodePath) onready var startPath
+export(NodePath) onready var endPath
 var nodeStart
 var nodeEnd
 export(float) var _speed = 400.0
@@ -14,8 +14,11 @@ var player = null
 
 
 func _ready():
-	nodeStart = get_node(startPath)
-	nodeEnd = get_node(endPath)
+	if startPath:
+		nodeStart = get_node(startPath)
+		
+	if endPath:
+		nodeEnd = get_node(endPath)
 
 
 func _process(_delta):

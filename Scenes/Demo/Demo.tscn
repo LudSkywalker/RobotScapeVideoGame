@@ -1764,18 +1764,26 @@ __meta__ = {
 
 [node name="EnemyFinal" parent="Habitacion10" instance=ExtResource( 11 )]
 position = Vector2( -1838.14, 283.241 )
+startPath = NodePath("../../Player")
+endPath = NodePath("../../Player")
 
 [node name="EnemyFinal2" parent="Habitacion10" instance=ExtResource( 11 )]
 position = Vector2( -2128.31, 287.998 )
+startPath = NodePath("../../Player")
+endPath = NodePath("../../Player")
 
 [node name="EnemyFinal3" parent="Habitacion10" instance=ExtResource( 11 )]
 position = Vector2( 644.925, -292.335 )
 
 [node name="EnemyFinal4" parent="Habitacion10" instance=ExtResource( 11 )]
 position = Vector2( 644.925, 283.241 )
+startPath = NodePath("../../Player")
+endPath = NodePath("../../Player")
 
 [node name="EnemyFinal5" parent="Habitacion10" instance=ExtResource( 11 )]
 position = Vector2( -829.692, 292.755 )
+startPath = NodePath("../../Player")
+endPath = NodePath("../../Player")
 
 [node name="Area2D" type="Area2D" parent="Habitacion10"]
 position = Vector2( -833.207, -334.496 )
