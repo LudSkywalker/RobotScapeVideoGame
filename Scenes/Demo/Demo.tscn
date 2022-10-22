@@ -21,6 +21,7 @@ extents = Vector2( 62.9771, 188.504 )
 
 [node name="Demo" type="Node2D"]
 position = Vector2( -773.115, -410.258 )
+scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -67,9 +68,6 @@ rect_scale = Vector2( 1.30114, 1.38135 )
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Obstacle5" type="StaticBody2D" parent="Habitacion1"]
 position = Vector2( -774.829, 4.94058 )
