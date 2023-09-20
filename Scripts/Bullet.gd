@@ -1,9 +1,9 @@
 extends RigidBody2D
-export var shoot = false
+@export var shoot = false
 
 
 func init(animation):
-	$AnimatedSprite.play(animation)
+	$AnimatedSprite2D.play(animation)
 
 
 func _on_Area2D_body_entered(body):

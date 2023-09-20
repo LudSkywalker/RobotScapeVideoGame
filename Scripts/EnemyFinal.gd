@@ -1,11 +1,11 @@
 extends Enemy
 
-var batery = 18
+var batery = 18.0
 
 
 func _ready():
 	active = false
-	_speed = 210
+	_speed = 350
 	nodeStart = get_tree().get_root().get_node("Demo/Player")
 	nodeEnd = get_tree().get_root().get_node("Demo/Player")
 

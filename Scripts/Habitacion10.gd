@@ -11,7 +11,8 @@ func _process(_delta):
 			&& !has_node("EnemyFinal3")
 			&& !has_node("EnemyFinal4")
 		):
-			OS.alert("¡Felicidades!, has ganado\nHas demostrado tu inteligencia y valentia")
+			print("fin")
+			OS.alert("¡Felicidades!, has ganado\nHas demostrado tu inteligencia y valentia","FIN")
 			get_tree().quit()
 			used = false
 

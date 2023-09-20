@@ -1,54 +1,56 @@
-extends KinematicBody2D
-export var _speed = 350
-export var _fire_speed = 1000
+extends CharacterBody2D
+@export var _speed = 550
+@export var _fire_speed = 1500
 var hability = null
 var heart = 3
 var Bullet = preload("res://Scenes/Demo/Bullet.tscn")
 var bullet = null
 var fire_time = 0
 var invulnerable_time = 0
-export var max_shoots_per_second = 3.8
+@export var max_shoots_per_second = 3.8
 
 
 func _ready():
-	fire_time = OS.get_system_time_msecs()
+	fire_time = Time.get_ticks_msec()
 
 
 func _process(_delta):
-	var velocity = Vector2.ZERO  # The player's movement vector.
-	if Input.is_action_pressed("ui_close"):
+	var player_velocity = Vector2.ZERO  # The player's movement vector.
+	if Input.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 
 	if Input.is_action_pressed("ui_right"):
-		velocity.x += 1
+		player_velocity.x += 1
 
 	if Input.is_action_pressed("ui_left"):
-		velocity.x -= 1
+		player_velocity.x -= 1
 
 	if Input.is_action_pressed("ui_down"):
-		velocity.y += 1
+		player_velocity.y += 1
 
 	if Input.is_action_pressed("ui_up"):
-		velocity.y -= 1
+		player_velocity.y -= 1
 
-	if velocity.length() > 0:
-		if velocity.y < 0:
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("Up")
-		elif velocity.y > 0:
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("Down")
-		elif velocity.x < 0:
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("Left")
-		elif velocity.x > 0:
-			$AnimatedSprite.flip_h = true
-			$AnimatedSprite.play("Left")
-		velocity = velocity.normalized() * _speed
-		velocity = move_and_slide(velocity)
+	if player_velocity.length() > 0:
+		if player_velocity.y < 0:
+			$AnimatedSprite2D.flip_h = false
+			$AnimatedSprite2D.play("Up")
+		elif player_velocity.y > 0:
+			$AnimatedSprite2D.flip_h = false
+			$AnimatedSprite2D.play("Down")
+		elif player_velocity.x < 0:
+			$AnimatedSprite2D.flip_h = false
+			$AnimatedSprite2D.play("Left")
+		elif player_velocity.x > 0:
+			$AnimatedSprite2D.flip_h = true
+			$AnimatedSprite2D.play("Left")
+		player_velocity = player_velocity.normalized() * _speed
+		set_velocity(player_velocity)
+		move_and_slide()
+		player_velocity = velocity
 	else:
-		$AnimatedSprite.flip_h = false
-		$AnimatedSprite.play("default")
+		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.play("default")
 
 	if hability:
 		var direction = Vector2.ZERO
@@ -62,25 +64,25 @@ func _process(_delta):
 			direction.y -= 1
 		if (
 			direction.length() > 0
-			&& (OS.get_system_time_msecs() - fire_time) > 1000 / max_shoots_per_second
+			&& (Time.get_ticks_msec() - fire_time) > 1000 / max_shoots_per_second
 		):
-			fire_time = OS.get_system_time_msecs()
+			fire_time = Time.get_ticks_msec()
 			if hability == "disparo":
 				fire(direction)
 
 
 func damage():
-	if OS.get_system_time_msecs() > invulnerable_time:
+	if Time.get_ticks_msec() > invulnerable_time:
 		heart -= 1
 		if heart <= 0:
 			get_tree().quit()
 		else:
-			invulnerable_time = OS.get_system_time_msecs() + 1000
+			invulnerable_time = Time.get_ticks_msec() + 1000
 			$hearts.play(str(heart))
 
 
 func fire(direction: Vector2):
-	bullet = Bullet.instance()
+	bullet = Bullet.instantiate()
 
 	if (direction.y == 1 || direction.y == -1) && direction.x == 0:
 		bullet.init("vertical")
@@ -89,5 +91,5 @@ func fire(direction: Vector2):
 
 	bullet.shoot = true
 	bullet.position = get_global_position()
-	bullet.apply_impulse(Vector2(), direction)
+	bullet.apply_impulse(direction, Vector2())
 	get_tree().get_root().add_child(bullet)
