@@ -6,7 +6,7 @@ class_name Enemy
 @export var nodeEnd:Node
 
 @export var _speed: float = 600.0
-var space_between_refs = 5
+var space_between_refs = 40
 var to_start = true
 var active = true
 var player = null
@@ -37,6 +37,7 @@ func _process(_delta):
 		set_velocity(enemy_velocity)
 		move_and_slide()
 		enemy_velocity = velocity
+
 	if player:
 		player.damage()
 

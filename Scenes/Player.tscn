@@ -121,8 +121,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="14"]
-radius = 18.9034
-height = 79.7668
+radius = 21.2664
+height = 84.3688
 
 [sub_resource type="AtlasTexture" id="17"]
 atlas = ExtResource("3")
@@ -173,7 +173,7 @@ sprite_frames = SubResource("13")
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 10)
+position = Vector2(0, 8)
 scale = Vector2(1.26961, 1.3038)
 shape = SubResource("14")
 
@@ -184,5 +184,4 @@ sprite_frames = SubResource("18")
 animation = &"3"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_smoothed = true
-position_smoothing_enabled = true
+zoom = Vector2(0.5, 0.5)

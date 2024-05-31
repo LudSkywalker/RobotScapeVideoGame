@@ -17,7 +17,7 @@ func _ready():
 func _process(_delta):
 	var player_velocity = Vector2.ZERO  # The player's movement vector.
 	if Input.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+		get_tree().reload_current_scene()
 
 	if Input.is_action_pressed("ui_right"):
 		player_velocity.x += 1
@@ -75,7 +75,8 @@ func damage():
 	if Time.get_ticks_msec() > invulnerable_time:
 		heart -= 1
 		if heart <= 0:
-			get_tree().quit()
+			OS.alert("¡Lastima!\nIntentalo nuevamente, no pierdas tu determinación","FIN")
+			get_tree().reload_current_scene()
 		else:
 			invulnerable_time = Time.get_ticks_msec() + 1000
 			$hearts.play(str(heart))

@@ -1,6 +1,7 @@
-res://Scenes/Demo/Bullet.tscn::4da02f6ea7b5272067926e32c7155912::1695003242::res://.godot/exported/133200997/export-f6eb6819b37d5fa515fca324480ed938-Bullet.scn
-res://Scenes/Demo/Demo.tscn::442aa273757c50e6edcbb43071247fca::1695003351::res://.godot/exported/133200997/export-c87df5304d51584ee00c63de8bd981f4-Demo.scn
-res://Scenes/Demo/Enemy.tscn::ccea2365e19e8ecd4c575220a8807f4d::1695003242::res://.godot/exported/133200997/export-ae1c99cb4d2f67532ac866f570b94011-Enemy.scn
-res://Scenes/Demo/EnemyFinal.tscn::cfbf4159fa420e6288c7c66279de83d9::1684612659::res://.godot/exported/133200997/export-05a87ef3ff00fda7286e3ecfd6cf618f-EnemyFinal.scn
-res://Scenes/Player.tscn::6f7845d90876e5e1e64aa5f9ac6a2a39::1695003242::res://.godot/exported/133200997/export-a7209d3b864edc0146622aad500fa2c1-Player.scn
-res://default_env.tres::fb415556498fa533008b4bfe6135883f::1695003351::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
+res://Scenes/Demo/Bullet.tscn::4da02f6ea7b5272067926e32c7155912::1717169824::res://.godot/exported/133200997/export-f6eb6819b37d5fa515fca324480ed938-Bullet.scn
+res://Scenes/Demo/Demo.tscn::7f68679f483e8c0a8aeab6fb5bbd8c9d::1717169824::res://.godot/exported/133200997/export-c87df5304d51584ee00c63de8bd981f4-Demo.scn
+res://Scenes/Demo/Enemy.tscn::106869d4a84fd298028e32ab3eea0629::1717169824::res://.godot/exported/133200997/export-ae1c99cb4d2f67532ac866f570b94011-Enemy.scn
+res://Scenes/Demo/EnemyFinal.tscn::b614a127a170f7ac3685e39aeabb7dcb::1717169825::res://.godot/exported/133200997/export-05a87ef3ff00fda7286e3ecfd6cf618f-EnemyFinal.scn
+res://Scenes/Player.tscn::bbe101d35c0d1aa4c68f03a60ccc4d4d::1717170305::res://.godot/exported/133200997/export-a7209d3b864edc0146622aad500fa2c1-Player.scn
+res://default_env.tres::fbdbb27080cb4a0a4f3883dc9b343ce7::1717170305::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
+res://default_bus_layout.tres::fd0257e0b6f6357db8b976fb13bfec63::1717169526::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://hym1b0relj43" path="res://Sprites/demo/Habitacion3.png" id="7"]
 [ext_resource type="PackedScene" uid="uid://d0v6fe1sqty3d" path="res://Scenes/Demo/Bullet.tscn" id="8"]
 [ext_resource type="Script" path="res://Scripts/Habitacion10.gd" id="10"]
-[ext_resource type="PackedScene" path="res://Scenes/Demo/EnemyFinal.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://8vl3tn0wdkkh" path="res://Scenes/Demo/EnemyFinal.tscn" id="11"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(744.766, 438.018)
@@ -25,7 +25,7 @@ scale = Vector2(1.5, 1.5)
 script = ExtResource("4")
 
 [node name="Player" parent="." instance=ExtResource("1")]
-position = Vector2(-634.59, -371.161)
+position = Vector2(-639.923, -309.161)
 
 [node name="Habitacion1" type="Node2D" parent="."]
 position = Vector2(20.4198, -25.3517)
@@ -149,10 +149,10 @@ shape = SubResource("2")
 position = Vector2(427.733, 6.70148)
 
 [node name="Start" type="Node2D" parent="Habitacion1/EnemyGroup"]
-position = Vector2(40.6947, 365.892)
+position = Vector2(41.2572, 358.156)
 
 [node name="End" type="Node2D" parent="Habitacion1/EnemyGroup"]
-position = Vector2(39.1728, -373.228)
+position = Vector2(51.2572, -380.511)
 
 [node name="Enemy" parent="Habitacion1/EnemyGroup" node_paths=PackedStringArray("nodeStart", "nodeEnd") instance=ExtResource("3")]
 position = Vector2(-780.768, 76.5938)
@@ -163,10 +163,10 @@ nodeEnd = NodePath("../End")
 position = Vector2(-89.3737, 31.0013)
 
 [node name="Start" type="Node2D" parent="Habitacion1/EnemyGroup2"]
-position = Vector2(-60.9705, 347.915)
+position = Vector2(-29.6361, 337.856)
 
 [node name="End" type="Node2D" parent="Habitacion1/EnemyGroup2"]
-position = Vector2(549.81, 343.428)
+position = Vector2(538.364, 334.522)
 
 [node name="Enemy" parent="Habitacion1/EnemyGroup2" node_paths=PackedStringArray("nodeStart", "nodeEnd") instance=ExtResource("3")]
 position = Vector2(-0.368896, -395.697)

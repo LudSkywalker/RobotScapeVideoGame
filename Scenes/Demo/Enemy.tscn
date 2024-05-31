@@ -40,9 +40,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(48.7125, 78.2559)
+size = Vector2(52.6095, 100.615)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xbhev"]
+radius = 11.8492
+height = 33.9204
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["enemy"]]
 collision_mask = 2
@@ -55,14 +57,14 @@ autoplay = "default"
 frame_progress = 0.633001
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1.5)
+position = Vector2(0.999999, 2.5)
 scale = Vector2(1.02643, 0.626151)
 shape = SubResource("1")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2.84217e-14, 3)
+position = Vector2(1, 4)
 scale = Vector2(2.8694, 2.77119)
 shape = SubResource("CapsuleShape2D_xbhev")
 

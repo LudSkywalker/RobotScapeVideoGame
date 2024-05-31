@@ -1,0 +1,9 @@
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://db2374csjb4m4"]
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_vib5r"]
+resource_name = "Delay"
+
+[resource]
+bus/0/mute = true
+bus/0/effect/0/effect = SubResource("AudioEffectDelay_vib5r")
+bus/0/effect/0/enabled = false

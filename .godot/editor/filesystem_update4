@@ -1,9 +1,9 @@
+res://default_bus_layout.tres
 res://default_env.tres
 res://Scenes/Player.tscn
+res://Scripts/Player.gd
 res://Scenes/Demo/Demo.tscn
 res://Scenes/Demo/Enemy.tscn
-res://Scripts/Player.gd
-res://Scripts/Enemy.gd
 res://Scenes/Demo/Bullet.tscn
+res://Scenes/Demo/EnemyFinal.tscn
 res://Scripts/Habitacion10.gd
-res://Scripts/EnemyFinal.gd
